@@ -1,0 +1,17 @@
+percept = image
+interpert_input = autokeras
+
+autokeras_train_data = train/label.csv, train
+autokeras_test_data = test/label.csv, test
+autokeras_timeout = 1800
+
+autokeras_output_keras_model = my_model.h5
+
+keras_model_num_classes = 2
+keras_model_output_activation = sigmoid
+
+state =  green, red
+action = go
+
+rule = green is true & red is false -> go is true
+rule = green is false & red is true -> go is false
